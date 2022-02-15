@@ -29,10 +29,15 @@ spec:
         volumeMounts:
         - mountPath: /data/
           name: data
+        - mountPath: /config/map
+          name: httpd-conf
       restartPolicy: Always
       serviceAccountName: ""
       volumes:
       - name: data
         persistentVolumeClaim:
           claimName: data
+      - name: httpd-conf
+        configMap:
+          name: httpd-conf
 status: {}
