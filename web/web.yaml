@@ -37,6 +37,7 @@ spec:
           volumeMounts:
           - name: nginx-conf
             mountPath: /opt/bitnami/nginx/conf/server_blocks/
+          imagePullPolicy: Always
       restartPolicy: Always
       volumes:
       - name: nginx-conf

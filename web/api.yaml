@@ -49,6 +49,7 @@ spec:
                       name: prism-api-secret
                       key: postgresql_username
           image: tcia/prism_api:latest
+          imagePullPolicy: Always
           name: api
           #command: ["/bin/sh"]
           #args: ["-c", "while true; do sleep 10;done"]
