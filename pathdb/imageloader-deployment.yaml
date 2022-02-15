@@ -19,7 +19,7 @@ spec:
         name: imageloader
     spec:
       containers:
-      - image: prism/imageloader:latest
+      - image: jrutecht/imageloader:latest
         imagePullPolicy: ""
         name: quip-imageloader
         command: [ "/bin/bash", "-c", "--" ]

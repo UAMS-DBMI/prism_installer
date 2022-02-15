@@ -19,7 +19,7 @@ spec:
       containers:
       - args:
         - /config/pathdb_pre.sh
-        image: prism/pathdb:latest
+        image: jrutecht/pathdb:latest
         imagePullPolicy: ""
         name: quip-pathdb
         ports:

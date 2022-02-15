@@ -17,7 +17,7 @@ spec:
         name: iip
     spec:
       containers:
-      - image: prism/iip:latest
+      - image: jrutecht/iip:latest
         imagePullPolicy: ""
         name: ca-iip
         ports:

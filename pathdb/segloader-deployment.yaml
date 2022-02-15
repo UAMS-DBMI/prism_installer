@@ -17,7 +17,7 @@ spec:
         name: segloader
     spec:
       containers:
-      - image: prism/segloader:latest
+      - image: jrutecht/segloader:latest
         command: ["/bin/sh"]
         args: ["-c", "while true; do echo hello; sleep 10;done"]
         imagePullPolicy: ""

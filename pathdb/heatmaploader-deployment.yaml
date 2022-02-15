@@ -24,7 +24,7 @@ spec:
           value: noninteractive
         - name: TZ
           value: America/New_York
-        image: prism/heatmaploader:latest
+        image: jrutecht/heatmaploader:latest
         imagePullPolicy: ""
         name: quip-hmloader
         resources: {}
