@@ -1,26 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert -f quip-pathdb.yml.PRISM -o openshift2
-    kompose.version: 1.21.0 (992df58d8)
   creationTimestamp: null
   labels:
-    io.kompose.service: back
+    name: back
   name: back
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: back
+      name: back
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert -f quip-pathdb.yml.PRISM -o openshift2
-        kompose.version: 1.21.0 (992df58d8)
       creationTimestamp: null
       labels:
-        io.kompose.service: back
+        name: back
     spec:
       containers:
       - env:
@@ -34,7 +28,7 @@ spec:
           value: https://www.googleapis.com/oauth2/v3/certs
         - name: MONGO_URI
           value: mongodb://ca-mongo
-        image: docker-registry.default.svc:5000/pathdb/back:latest
+        image: prism/back:latest
         imagePullPolicy: ""
         name: ca-security
         ports:

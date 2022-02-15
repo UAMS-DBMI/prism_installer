@@ -1,31 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert -f quip-pathdb.yml.PRISM -o openshift2
-    kompose.version: 1.21.0 (992df58d8)
   creationTimestamp: null
   labels:
-    io.kompose.service: pathdb
+    name: pathdb
   name: pathdb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: pathdb
+      name: pathdb
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert -f quip-pathdb.yml.PRISM -o openshift2
-        kompose.version: 1.21.0 (992df58d8)
       creationTimestamp: null
       labels:
-        io.kompose.service: pathdb
+        name: pathdb
     spec:
       containers:
       - args:
         - /config/pathdb_pre.sh
-        image: docker-registry.default.svc:5000/pathdb/pathdb:latest
+        image: prism/pathdb:latest
         imagePullPolicy: ""
         name: quip-pathdb
         ports:
