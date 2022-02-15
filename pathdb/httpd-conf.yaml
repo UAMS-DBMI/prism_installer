@@ -14,7 +14,7 @@ data:
 
     ServerAdmin root@localhost
 
-    ServerName quip-pathdb-pathdb.apps.dbmi.cloud
+    ServerName pathdb.127.0.0.1.nip.io
 
     <Directory />
         AllowOverride none
