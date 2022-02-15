@@ -17,8 +17,7 @@ spec:
   selector:
     matchLabels:
       app: database
-  strategy:
-    type: Recreate
+  serviceName: "database"
   template:
     metadata:
       labels:

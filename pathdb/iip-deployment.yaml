@@ -17,7 +17,7 @@ spec:
         name: iip
     spec:
       containers:
-      - image: jrutecht/iip:latest
+      - image: camicroscope/iipimage:latest
         imagePullPolicy: ""
         name: ca-iip
         ports:
