@@ -1,0 +1,46 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: sui-sites-enabled-configmap
+data:
+  sui-app.conf: |
+    upstream app_server {
+      server 127.0.0.1:3000 fail_timeout=0;
+    }
+
+    proxy_cache_path /var/cache keys_zone=one:30m;
+
+    server {
+      listen 80;
+      client_max_body_size 4G;
+
+      proxy_cache one;
+
+      access_log /var/log/nginx/access.log combined;
+      error_log  /var/log/nginx/error.log warn;
+
+      keepalive_timeout 5;
+
+      # path for static files (only needed for serving local staticfiles)
+      root /usr/share/nginx/html;
+
+      location / {
+        # checks for static file, if not found proxy to app
+        try_files $uri $uri/ /index.html;
+      }
+
+      location /api/ {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host $http_host;
+
+        proxy_pass http://app_server/;
+
+        proxy_cache_valid any 30m;
+      }
+
+      error_page 500 502 503 504 /500.html;
+      location = /500.html {
+        root /var/www/html/;
+      }
+    }

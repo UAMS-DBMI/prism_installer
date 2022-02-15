@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: api
+  name: api
+spec:
+  ports:
+    - name: "8080"
+      port: 8080
+      targetPort: 8080
+  selector:
+    name: api
+status:
+  loadBalancer: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: api
+  template:
+    metadata:
+      labels:
+        name: api
+    spec:
+      containers:
+        - env:
+            - name: API_PORT
+              value: "8080"
+            - name: API_WORKERS
+              value: "4"
+            - name: PGHOST
+              value: database
+            - name: PGDATABASE
+              value: "collection_manager"
+            - name: PGPASSWORD
+              valueFrom:
+                  secretKeyRef:
+                      name: prism-api-secret
+                      key: postgresql_password
+            - name: PGUSER
+              valueFrom:
+                  secretKeyRef:
+                      name: prism-api-secret
+                      key: postgresql_username
+          image: tcia/prism_api:latest
+          name: api
+          #command: ["/bin/sh"]
+          #args: ["-c", "while true; do sleep 10;done"]
+          ports:
+            - containerPort: 8080
+          resources: {}
+      restartPolicy: Always
+status: {}
+
