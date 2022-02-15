@@ -1,11 +1,10 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: triplestore-pv-claim-auto
+  name: triplestore-pv
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: glusterfs-storage
   resources:
     requests:
       storage: 1Gi

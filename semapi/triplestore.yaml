@@ -17,8 +17,7 @@ spec:
   selector:
     matchLabels:
       app: triplestore
-  strategy:
-    type: Recreate
+  serviceName: "triplestore"
   template:
     metadata:
       labels:
@@ -39,4 +38,4 @@ spec:
       volumes:
       - name: triplestore-persistent-storage
         persistentVolumeClaim:
-          claimName: triplestore-pv-claim-auto
+          claimName: triplestore-pv
