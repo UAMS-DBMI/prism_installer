@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: ca-mongodb
+    prism: ca-mongodb
+    pathdb: ca-mongodb
   name: ca-mongodb
 spec:
   accessModes:

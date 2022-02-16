@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: imageloader
+    prism: imageloader
+    pathdb: imageloader
   name: imageloader
 spec:
   replicas: 1
@@ -17,6 +19,8 @@ spec:
       creationTimestamp: null
       labels:
         name: imageloader
+        prism: imageloader
+        pathdb: imageloader
     spec:
       containers:
       - image: jrutecht/imageloader:latest

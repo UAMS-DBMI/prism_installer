@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: keys
+    prism: keys
+    pathdb: keys
   name: keys
 spec:
   accessModes:

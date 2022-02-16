@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: iip
+    prism: ca-iip
+    pathdb: ca-iip
   name: ca-iip
 spec:
   ports:

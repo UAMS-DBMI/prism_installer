@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: segloader
+    prism: segloader
+    pathdb: segloader
   name: segloader
 spec:
   replicas: 1
@@ -15,6 +17,8 @@ spec:
       creationTimestamp: null
       labels:
         name: segloader
+        prism: segloader
+        pathdb: segloader
     spec:
       containers:
       - image: jrutecht/segloader:latest

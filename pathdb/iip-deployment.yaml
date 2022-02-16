@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: iip
+    prism: ca-iip
+    pathdb: ca-iip
   name: iip
 spec:
   replicas: 1
@@ -15,6 +17,8 @@ spec:
       creationTimestamp: null
       labels:
         name: iip
+        prism: ca-iip
+        pathdb: ca-iip
     spec:
       containers:
       - image: camicroscope/iipimage:latest

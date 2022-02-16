@@ -3,6 +3,7 @@ kind: Service
 metadata:
   labels:
     name: semapi
+    prism: semapi
   name: semapi
 spec:
   ports:
@@ -18,6 +19,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: semapi
+  labels:
+    name: semapi
+    prism: semapi
 spec:
   replicas: 1
   selector:
@@ -27,6 +31,7 @@ spec:
     metadata:
       labels:
         name: semapi
+        prism: semapi
     spec:
       containers:
         - image: tcia/prism_semapi:latest

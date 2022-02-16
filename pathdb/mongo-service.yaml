@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: ca-mongo
+    prism: ca-mongo
+    pathdb: ca-mongo
   name: ca-mongo
 spec:
   ports:

@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: ca-mongo
+    prism: ca-mongo
+    pathdb: ca-mongo
   name: ca-mongo
 spec:
   replicas: 1
@@ -15,6 +17,8 @@ spec:
       creationTimestamp: null
       labels:
         name: ca-mongo 
+        prism: ca-mongo
+        pathdb: ca-mongo
     spec:
       containers:
       - image: mongo:4.2-bionic

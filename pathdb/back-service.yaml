@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: ca-security
+    prism: ca-security
+    pathdb: ca-security
   name: ca-security
 spec:
   ports:

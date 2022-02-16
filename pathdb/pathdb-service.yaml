@@ -3,7 +3,9 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    name: pathdb
+    name: quip-pathdb
+    prism: quip-pathdb
+    pathdb: quip-pathdb
   name: quip-pathdb
 spec:
   ports:

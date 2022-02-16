@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: heatmaploader
+    prism: heatmaploader
+    pathdb: heatmaploader
   name: heatmaploader
 spec:
   replicas: 1
@@ -17,6 +19,8 @@ spec:
       creationTimestamp: null
       labels:
         name: heatmaploader
+        prism: heatmaploader
+        pathdb: heatmaploader
     spec:
       containers:
       - env:

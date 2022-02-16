@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: pathdb
+    prism: pathdb
+    pathdb: pathdb
   name: pathdb
 spec:
   replicas: 1
@@ -15,6 +17,8 @@ spec:
       creationTimestamp: null
       labels:
         name: pathdb
+        prism: pathdb
+        pathdb: pathdb
     spec:
       containers:
       - args:

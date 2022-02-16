@@ -1,8 +1,10 @@
----
 apiVersion: v1
 kind: Service
 metadata:
   name: facet-mongo
+  labels:
+    name: facet-mongo
+    prism: facet-mongo
 spec:
   ports:
   - name: facet-mongo
@@ -16,6 +18,7 @@ kind: Deployment
 metadata:
   labels:
     app: facet-mongo
+    prism: facet-mongo
   name: facet-mongo
 spec:
   replicas: 1
@@ -28,6 +31,7 @@ spec:
     metadata:
       labels:
         app: facet-mongo
+        prism: facet-mongo
     spec:
       containers:
       - name: facet-mongo

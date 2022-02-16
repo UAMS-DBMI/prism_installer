@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: triplestore
+  labels:
+    name: triplestore
+    prism: triplestore
 spec:
   ports:
   - port: 7200
@@ -13,6 +16,9 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: StatefulSet
 metadata:
   name: triplestore
+  labels:
+    name: triplestore
+    prism: triplestore
 spec:
   selector:
     matchLabels:
@@ -22,6 +28,7 @@ spec:
     metadata:
       labels:
         app: triplestore
+        prism: triplestore
     spec:
       containers:
       - image: tcia/graphdb:9.6.0

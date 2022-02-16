@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     name: ca-security
+    prism: ca-security
+    pathdb: ca-security
   name: ca-security
 spec:
   replicas: 1
@@ -15,6 +17,8 @@ spec:
       creationTimestamp: null
       labels:
         name: ca-security
+        prism: ca-security
+        pathdb: ca-security
     spec:
       containers:
       - env:

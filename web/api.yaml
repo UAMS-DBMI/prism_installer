@@ -3,6 +3,7 @@ kind: Service
 metadata:
   labels:
     name: api
+    prism: api
   name: api
 spec:
   ports:
@@ -27,6 +28,7 @@ spec:
     metadata:
       labels:
         name: api
+        prism: api
     spec:
       containers:
         - env:
