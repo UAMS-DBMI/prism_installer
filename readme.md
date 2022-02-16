@@ -1,25 +1,27 @@
 # Install
-* Clone this repo locally
+Clone this repo locally
 
-* Create web/secret.yaml and coreapi/secret.yaml, there are example files in the directory to show the structure.
+`git clone https://github.com/UAMS-DBMI/prism_installer`
 
-* Ensure the command runs with no errors
+Create web/secret.yaml and coreapi/secret.yaml, there are example files in the directory to show the structure.
 
-* `make`
+Ensure your kubectl can parse the yaml files with no errors
 
-* Actually perform install
+`make`
 
-* `make apply`
+Then actually apply
 
-* Now wait for everything to come up, you can monitor status with.
+`make apply`
 
-* `make status`
+Now wait for everything to come up, you can monitor status with.
 
-* After all pods are running, expose the main web container.
+`make status`
 
-* `make serve`
+After all pods are running, expose the main web container.
 
-* Finally open your browser and head to http://127.0.0.1.nip.io:8080/ this is a nip.io proxy to allow subdomains on your local machine without editing your hosts file.
+`make serve`
+
+Finally open your browser and head to http://127.0.0.1.nip.io:8080/ this is a nip.io proxy to allow subdomains on your local machine without editing your hosts file.
 
 # Load sample images -> from PRISM Sample data
 oc rsync ./pathology/ deployment/imageloader:/data/images
