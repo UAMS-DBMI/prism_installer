@@ -3,8 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   creationTimestamp: null
   labels:
-    name: mongodb
-  name: mongodb
+    name: ca-mongodb
+  name: ca-mongodb
 spec:
   accessModes:
   - ReadWriteOnce

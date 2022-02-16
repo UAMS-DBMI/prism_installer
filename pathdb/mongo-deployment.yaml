@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    name: mongo
-  name: mongo
+    name: ca-mongo
+  name: ca-mongo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: mongo
+      name: ca-mongo
   template:
     metadata:
       creationTimestamp: null
       labels:
-        name: mongo 
+        name: ca-mongo 
     spec:
       containers:
       - image: mongo:4.2-bionic
@@ -25,11 +25,11 @@ spec:
         resources: {}
         volumeMounts:
         - mountPath: /data/db
-          name: mongodb
+          name: ca-mongodb
       restartPolicy: Always
       serviceAccountName: ""
       volumes:
-      - name: mongodb
+      - name: ca-mongodb
         persistentVolumeClaim:
-          claimName: mongodb
+          claimName: ca-mongodb
 status: {}

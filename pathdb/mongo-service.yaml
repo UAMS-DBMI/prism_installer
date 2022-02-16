@@ -3,7 +3,7 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    name: mongo
+    name: ca-mongo
   name: ca-mongo
 spec:
   ports:
@@ -11,6 +11,6 @@ spec:
     port: 27017
     targetPort: 27017
   selector:
-    name: mongo
+    name: ca-mongo
 status:
   loadBalancer: {}

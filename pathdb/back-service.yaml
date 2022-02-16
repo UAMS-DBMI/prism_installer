@@ -3,7 +3,7 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    name: back
+    name: ca-security
   name: ca-security
 spec:
   ports:
@@ -11,6 +11,6 @@ spec:
     port: 4010
     targetPort: 4010
   selector:
-    name: back
+    name: ca-security
 status:
   loadBalancer: {}

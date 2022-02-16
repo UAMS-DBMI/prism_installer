@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    name: back
-  name: back
+    name: ca-security
+  name: ca-security
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: back
+      name: ca-security
   template:
     metadata:
       creationTimestamp: null
       labels:
-        name: back
+        name: ca-security
     spec:
       containers:
       - env:
