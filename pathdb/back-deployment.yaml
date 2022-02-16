@@ -22,6 +22,8 @@ spec:
           value: Editor
         - name: DISABLE_SEC
           value: "true"
+        - name: DEBUG
+          value: "express:*"
         - name: IIP_PATH
           value: http://ca-iip/fcgi-bin/iipsrv.fcgi
         - name: JWK_URL

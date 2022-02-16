@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - image: camicroscope/iipimage:latest
-        imagePullPolicy: ""
+        imagePullPolicy: Always
         name: ca-iip
         ports:
         - containerPort: 8080

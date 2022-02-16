@@ -91,10 +91,10 @@ data:
         Options Indexes FollowSymLinks IncludesNOEXEC
         KeepAlive On
         DirectoryIndex index.php index.htm index.html
-        ProxyPass /caMicroscope/img/ http://ca-security:4010/img/
-        ProxyPassReverse /caMicroscope/img/ http://ca-security:4010/img/
-        ProxyPass /caMicroscope/data/ http://ca-security:4010/data/
-        ProxyPassReverse /caMicroscope/data/ http://ca-security:4010/data/
+        ProxyPass /caMicroscope/img/ http://ca-security/img/
+        ProxyPassReverse /caMicroscope/img/ http://ca-security/img/
+        ProxyPass /caMicroscope/data/ http://ca-security/data/
+        ProxyPassReverse /caMicroscope/data/ http://ca-security/data/
         ProxyRequests Off
         CustomLog "/data/pathdb/logs/access_log" combined
         ErrorLog "/data/pathdb/logs/error_log"
@@ -105,10 +105,10 @@ data:
         RewriteEngine On
         KeepAlive On
         DirectoryIndex index.php index.htm index.html
-        ProxyPass /caMicroscope/img/ http://ca-security:4010/img/
-        ProxyPassReverse /caMicroscope/img/ http://ca-security:4010/img/
-        ProxyPass /caMicroscope/data/ http://ca-security:4010/data/
-        ProxyPassReverse /caMicroscope/data/ http://ca-security:4010/data/
+        ProxyPass /caMicroscope/img/ http://ca-security/img/
+        ProxyPassReverse /caMicroscope/img/ http://ca-security/img/
+        ProxyPass /caMicroscope/data/ http://ca-security/data/
+        ProxyPassReverse /caMicroscope/data/ http://ca-security/data/
         ProxyRequests Off
         CustomLog "/data/pathdb/logs/access_log" combined
         ErrorLog "/data/pathdb/logs/error_log"
