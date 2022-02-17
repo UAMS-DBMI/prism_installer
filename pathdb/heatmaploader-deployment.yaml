@@ -28,7 +28,7 @@ spec:
           value: noninteractive
         - name: TZ
           value: America/New_York
-        image: jrutecht/heatmaploader:latest
+        image: camicroscope/pathdb-heatmaploader:latest
         imagePullPolicy: ""
         name: quip-hmloader
         resources: {}

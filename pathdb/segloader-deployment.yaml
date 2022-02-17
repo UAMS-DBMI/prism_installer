@@ -21,7 +21,7 @@ spec:
         pathdb: segloader
     spec:
       containers:
-      - image: jrutecht/segloader:latest
+      - image: camicroscope/pathdb-segloader:latest
         command: ["/bin/sh"]
         args: ["-c", "while true; do echo hello; sleep 10;done"]
         imagePullPolicy: ""

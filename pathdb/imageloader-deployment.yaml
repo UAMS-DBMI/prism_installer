@@ -23,7 +23,7 @@ spec:
         pathdb: imageloader
     spec:
       containers:
-      - image: jrutecht/imageloader:latest
+      - image: camicroscope/pathdb-imageloader:latest
         imagePullPolicy: ""
         name: quip-imageloader
         command: [ "/bin/bash", "-c", "--" ]

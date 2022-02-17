@@ -34,7 +34,7 @@ spec:
           value: https://www.googleapis.com/oauth2/v3/certs
         - name: MONGO_URI
           value: mongodb://ca-mongo
-        image: jrutecht/back:latest
+        image: ghcr.io/camicroscope/caracal:master
         imagePullPolicy: ""
         name: ca-security
         ports:
