@@ -15,6 +15,13 @@ Then actually apply
 
 Now wait for everything to come up, you can monitor status with.
 
+# Install Posda
+`git clone https://code.imphub.org/projects/PT/repos/k8s/browse`
+
+`make deploy`
+
+# Check Status
+
 `make status`
 
 After all pods are running, expose the main web container.
