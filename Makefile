@@ -9,7 +9,7 @@ apply:
 	kubectl apply --recursive -f .
 
 serve:
-	@echo open: http://127.0.0.1:8080.nip.io/
+	@echo open: http://127.0.0.1.nip.io:8080/
 	kubectl port-forward svc/web 8080:8080
 
 status:
