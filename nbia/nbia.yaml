@@ -43,6 +43,12 @@ spec:
           name: nbia
           ports:
             - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: nbia-api/
+              port: 8080
+            initialDelaySeconds: 120
+            periodSeconds: 30
           resources: {}
           volumeMounts:
           - name: nbia-webapp-storage
