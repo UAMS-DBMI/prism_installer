@@ -8,7 +8,7 @@ metadata:
     nbia: openldap
 spec:
   ports:
-  - port: 3306
+  - port: 1389
   selector:
     app: openldap
   clusterIP: None
