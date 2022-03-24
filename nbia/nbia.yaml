@@ -31,14 +31,8 @@ spec:
         prism: nbia
     spec:
       volumes:
-      - name: nbia-webapp-storage
-        persistentVolumeClaim:
-          claimName: nbia-webapp-pv-claim-auto
-      - name: nbia-log-storage
-        persistentVolumeClaim:
-          claimName: nbia-log-pv-claim-auto
       containers:
-        - image: jrutecht/nbia:latest
+        - image: jrutecht/nbia:0.1
           imagePullPolicy: Always
           name: nbia
           ports:
@@ -56,11 +50,6 @@ spec:
             initialDelaySeconds: 30
             periodSeconds: 10
           resources: {}
-          volumeMounts:
-          - name: nbia-webapp-storage
-            mountPath: /opt/bitnami/tomcat/webapps
-          - name: nbia-log-storage
-            mountPath: /opt/bitnami/tomcat/logs
       restartPolicy: Always
 status: {}
 
