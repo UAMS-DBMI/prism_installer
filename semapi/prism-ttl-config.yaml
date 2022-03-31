@@ -6,6 +6,8 @@ metadata:
     prism: prism-ttl-configmap
     name: prism-ttl-configmap
 data:
+  test.nt: |
+    <http://test1> <http://test> <http://testobject1> .
   prism-config.ttl: |
     #
     # RDF4J configuration template for a GraphDB Free repository
