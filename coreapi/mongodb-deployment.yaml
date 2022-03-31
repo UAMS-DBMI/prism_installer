@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: facet-mongo
-        image: bitnami/mongodb:latest
+        image: bitnami/mongodb:5.0.6
         imagePullPolicy: Always
         env:
         - name: MONGODB_USERNAME

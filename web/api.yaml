@@ -58,7 +58,7 @@ spec:
                   secretKeyRef:
                       name: prism-api-secret
                       key: postgresql_username
-          image: tcia/prism_api:latest
+          image: tcia/prism_api:v1.0
           imagePullPolicy: Always
           name: api
           #command: ["/bin/sh"]

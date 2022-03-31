@@ -34,7 +34,7 @@ spec:
         prism: semapi
     spec:
       containers:
-        - image: tcia/prism_semapi:latest
+        - image: tcia/prism_semapi:v1.0
           env:
             - name: SEMAPI_TRIPLESTORE_URL
               value: "http://triplestore:7200/repositories/prism"

@@ -32,7 +32,7 @@ spec:
     spec:
       volumes:
       containers:
-        - image: jrutecht/nbia:0.1
+        - image: jrutecht/nbia:v1.0
           imagePullPolicy: Always
           name: nbia
           ports:

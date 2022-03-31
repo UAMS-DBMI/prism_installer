@@ -34,7 +34,7 @@ spec:
         prism: web
     spec:
       containers:
-        - image: tcia/prism_landing:latest
+        - image: tcia/prism_landing:v1.0
           name: web
           ports:
             - containerPort: 8080
