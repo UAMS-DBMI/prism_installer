@@ -16,7 +16,7 @@ Then actually apply
 Now wait for everything to come up, you can monitor status with.
 
 # Install Posda
-`git clone https://code.imphub.org/projects/PT/repos/k8s/browse`
+`git clone https://code.imphub.org/scm/pt/k8s`
 
 `make deploy`
 
