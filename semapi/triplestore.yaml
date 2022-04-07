@@ -35,19 +35,21 @@ spec:
         name: triplestore-init
         env:
         - name: GDB_JAVA_OPTS
-          value: -Xmx8g -Dgraphdb.home.data=/opt/graphdb/home/data
+          value: -Xmx8g -Xms1g -Dgraphdb.home.data=/opt/graphdb/home/data
         volumeMounts:
         - name: triplestore-persistent-storage
           mountPath: /opt/graphdb/home
         - name: prism-ttl-configmap
           mountPath: /opt/preload
-        command: ["/opt/graphdb/dist/bin/preload", "-c", "/opt/preload/prism-config.ttl", "/opt/preload/test.nt"]
+        # command: ["/bin/bash", "/opt/graphdb/dist/bin/preload", "-c", "/opt/preload/prism-config.ttl", "/opt/preload/test.nt", "|", "return", "0"]
+        command: ["/bin/sh","-c"]
+        args: ["/opt/graphdb/dist/bin/preload -c /opt/preload/prism-config.ttl /opt/preload/test.nt | return 0"]
       containers:
       - image: tcia/graphdb:9.6.0
         name: triplestore
         env:
         - name: GDB_JAVA_OPTS
-          value: -Xmx8g -Dgraphdb.home.data=/opt/graphdb/home/data
+          value: -Xmx8g -Xms1g -Dgraphdb.home.data=/opt/graphdb/home/data
         ports:
         - containerPort: 7200
           name: triplestore

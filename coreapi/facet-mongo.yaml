@@ -21,12 +21,10 @@ metadata:
     prism: facet-mongo
   name: facet-mongo
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: facet-mongo
-  strategy:
-    type: Recreate
+  serviceName: "facet-mongo"
   template:
     metadata:
       labels:
