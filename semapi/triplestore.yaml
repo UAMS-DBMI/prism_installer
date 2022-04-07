@@ -35,7 +35,7 @@ spec:
         name: triplestore-init
         env:
         - name: GDB_JAVA_OPTS
-          value: -Xmx8g -Xms2g -Dgraphdb.home.data=/opt/graphdb/home/data
+          value: -Xmx8g -Dgraphdb.home.data=/opt/graphdb/home/data
         volumeMounts:
         - name: triplestore-persistent-storage
           mountPath: /opt/graphdb/home
@@ -47,7 +47,7 @@ spec:
         name: triplestore
         env:
         - name: GDB_JAVA_OPTS
-          value: -Xmx8g -Xms2g -Dgraphdb.home.data=/opt/graphdb/home/data
+          value: -Xmx8g -Dgraphdb.home.data=/opt/graphdb/home/data
         ports:
         - containerPort: 7200
           name: triplestore

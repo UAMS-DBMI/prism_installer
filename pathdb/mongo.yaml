@@ -1,5 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    name: ca-mongo
+    prism: ca-mongo
+    pathdb: ca-mongo
+  name: ca-mongo
+spec:
+  ports:
+  - name: "27017"
+    port: 27017
+    targetPort: 27017
+  selector:
+    name: ca-mongo
+status:
+  loadBalancer: {}
+---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   creationTimestamp: null
   labels:
