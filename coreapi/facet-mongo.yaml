@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: facet-mongo
-        image: bitnami/mongodb:5.0.6
+        image: bitnami/mongodb:4.2-bionic
         imagePullPolicy: Always
         env:
         - name: MONGODB_USERNAME
